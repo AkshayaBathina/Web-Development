@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento Grid Challenge</title>
+    <style>
+        body{
+            height:100vh;
+            width:100vw;
+            background-color: aliceblue;
+        }
+        .flex-container{
+            margin:10%;
+            display:flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            
+        }
+        .flex-item1{
+            background-color: #ffe4c4;
+            height:23rem;
+            width:18rem;
+            padding:20px;
+            order:1;
+        }
+        #button{
+            border-radius:30px;
+            margin-left: 20%;
+            height:4rem;
+            width:10rem;
+            background-color: #ede42ee6;
+            color:blueviolet;
+            border:0;
+        }
+        .flex-item2{
+            background-color: rgba(212, 212, 27, 0.847);
+            padding:10px;
+            height:55%;
+            width:19.5rem;
+            order:4;
+            margin-top:-11%;
+            
+        }
+        .chat{
+            padding:10px;
+            background-color: white;
+            border-radius: 20px;
+            height:60%
+           
+        }
+        #item1{
+            padding:20px;
+            background-color: pink;
+            border-radius: 20px;
+            margin-bottom: 10%;
+            margin-top:10%
+        }
+        #item2{
+            padding:20px;
+            background-color: bisque;
+            border-radius:20px;
+        }
+        .flex-item3{
+            color:white;
+            background-color:blueviolet;
+            padding:20px;
+            order:2;
+            width:35%;
+            height:18rem;
+            margin-left:2%;
+            
+           
+        }
+        .flex-item4{
+           
+            background-color:white;
+            padding:20px;
+            order:5;
+            height:30%;
+            width:15%;
+            margin-top:-17%;
+            margin-left:2%;
+            margin-right:0
+           
+           
+        }
+        .flex-item5{
+            background-color: white;
+            padding:20px;
+            order:6;
+            height:15rem;
+            width:15%;
+            margin-left:-37%;
+            margin-top:1%;
+
+        }
+        .flex-item6{
+            background-color:#d2c926e6;
+            padding:20px;
+            order:5;
+            height:13.25rem;
+            width:15%;
+            margin-left:2%;
+            margin-top:-17%;
+            
+            
+        }
+        .flex-item7{
+            background-color:blueviolet;
+            padding:20px;
+            order:7;
+            width:36.5rem;
+            height:15rem;
+            margin-left:2%;
+            margin-top:1%;
+        }
+        .flex-item8{
+            background-color: rgb(234, 183, 232);
+            order:3;
+            height:38rem;
+            width:20rem;
+            margin-left:2%;
+            
+
+        }
+        #besttime{
+            height:350px;
+            width:250px;
+            
+        }
+        #followers{
+            float:left;
+            margin:10%;
+            height:15rem;
+            margin-top: 0;
+            margin-left:1%;
+
+        }
+    </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item1">
+           <h1 style="text-align: left; margin-top: 8rem;">Create and schedule content <p style="color:blueviolet;margin-top: 0%;">quicker.</p></h1> 
+           <input type="button" value="Create post" id="button">
+           </div> 
+        <div class="flex-item2">
+            <h1 style="font-size: 40px;text-align: left;">Write your content using AI.</h1>
+            <div class="chat">
+            <div id="item1">
+                <p>
+                    Give me a 5 tips to growth my follower on insta
+                </p>
+            </div>
+            <div id="item2">
+                <p>Certainly! Here are five tips to help you grow your instagram....</p>
+            </div>
+            </div>
+            </div>
+            <div class="flex-item3">
+               <h1 style="font-size: 35px; text-align: center;"> Social Media <p style="color:yellow;margin:0">10x</p>Faster with AI </h1>  
+               <p style="text-align:center;font-size:20px">&#x2B50 &#x2B50 &#x2B50 &#x2B50 &#x2B50</p>
+               <p style="opacity:60%;text-align:center;font-size:30px;margin-top: 0;">Over 4,000 5-start reviews</p>
+            </div>
+            <div class="flex-item4">
+                <input type="button" value="@YourCo">
+                <h1>Manage multiple accounts and platforms.</h1>
+            </div>
+            <div class="flex-item5">
+                <h1 style="font-size:60px;margin-top: 0;margin-bottom:0;text-align: center;">>56%</h1>
+                <p style="font-size:22px;margin-top:0;text-align: center;">faster audience growth</p>
+                <img src="images/illustration-audience-growth.webp" style="width:250px">
+            </div>
+            <div class="flex-item6">
+                <h1>Maintain consistent posting schedule.</h1>
+                <table style="width:100%;">
+                    <thead style="background-color: blueviolet;">
+                        <tr>
+                            <th>August 2024</th>
+                            <th>Week1</th>
+                        </tr>
+                        
+                    </thead>
+                    <tbody style="background-color:white;">
+                        <tr>
+                            <td>&#xf058 &#xf058</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="flex-item7">
+                <img src="images/illustration-grow-followers.webp" id="followers">
+                <h1 style="color:white; font-size:40px; margin-top:0">Grow followers with non-stop content.</h1>
+            </div>
+            <div class="flex-item8">
+                <h1>Schedule to social media.</h1>
+                <img src="images/illustration-schedule-posts.webp" id="besttime"></br>
+                <p>Optimize post timings to publish content at the perfect time for your audience</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
