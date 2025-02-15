@@ -163,7 +163,7 @@ console.log(filterBooksByGenre("Programming"));
 Write a JavaScript function getBooksBelowPrice that takes a price limit (e.g., 40) and returns all books with a price lower than the specified amount.*/
 const getBooksBelowPrice = (pricelimit) => {
     return booksData.filter(books => books.price.amount < pricelimit)
-    .map(books => books.title)
+    .map(books => ({title:books.title, price: books.price.amount}))
 }
 
 console.log(getBooksBelowPrice(40));
@@ -171,7 +171,7 @@ console.log(getBooksBelowPrice(40));
 Write a JavaScript function getBooksWithMoreThanReviews that takes a number (e.g., 1) as input and returns all books that have more than the specified number of reviews.*/
 const getBooksWithMoreThanReviews = (numberofreviews) => {
     return booksData.filter(book => book.reviews.length > numberofreviews)
-    .map(book => book.title)
+    .map(book => ({title: book.title, numofreviews: book.reviews.length}))
 };
 console.log(getBooksWithMoreThanReviews(1));
 
@@ -182,9 +182,9 @@ const getMostPopularBook = () => {
         const avgRating = book.reviews.length 
             ? book.reviews.reduce((sum, review) => sum + review.rating, 0) / book.reviews.length 
             : 0;
-        return avgRating > (best.avgRating || 0) ? { ...book, avgRating } : best;
+        return avgRating > (best.avgRating || 0) ? { title:book.title, avgRating } : best;
        
-    }, {}).title
+    }, {})
    
 };
 
@@ -195,7 +195,7 @@ Write a JavaScript function getBooksInLanguages that takes an array of languages
 
 const getBooksInLanguages = (languages) => {
     return booksData.filter(book => book.languages.some(language => languages.includes(language)))
-    .map(book => book.title);
+.map(book => ({title:book.title, languages:book.languages}));
 }
 
 console.log(getBooksInLanguages(["French", "Spanish"]));
@@ -204,8 +204,8 @@ console.log(getBooksInLanguages(["French", "Spanish"]));
 Write a JavaScript function getMostExpensiveBook that returns the book with the highest price.*/
 const getMostExpensiveBook = () => {
     return booksData.reduce((max, book) => 
-        book.price.amount > max.price.amount ? book : max
-    ).title
+        book.price.amount > max.price ? ({title:book.title, price: book.price.amount}) : max,{title:null, price:0}
+    )
    
 };
 console.log(getMostExpensiveBook());
@@ -223,6 +223,7 @@ const sortBooksByRating = (booksData) => {
 };
 
 console.log(sortBooksByRating(booksData));
+
 
 
 
